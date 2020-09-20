@@ -118,6 +118,9 @@ class MainActivity : AppCompatActivity() {
         }
         numberTextView.text = countAll.toString()
 
+        fun calc(){
+
+        }
         resetButton.setOnClickListener {
             countAll = 0
             countWin = 0.0
