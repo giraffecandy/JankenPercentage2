@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> {
                     cpu.setImageResource(R.drawable.choki2)
                     result.text = "あなたの勝ちです"
-                    result.setTextColor(Color.RED)
+                    result.setTextColor(Color.parseColor("#E91e63"))
                     countWin += 1.0
                 }
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> {
                     cpu.setImageResource(R.drawable.paa2)
                     result.text = "あなたの勝ちです"
-                    result.setTextColor(Color.RED)
+                    result.setTextColor(Color.parseColor("#e91e63"))
                     countWin++
                 }
 
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                 1 -> {
                     cpu.setImageResource(R.drawable.goo2)
                     result.text = "あなたの勝ちです"
-                    result.setTextColor(Color.RED)
+                    result.setTextColor(Color.parseColor("#E91e63"))
                     countWin++
                 }
 
@@ -115,9 +115,15 @@ class MainActivity : AppCompatActivity() {
             val countCalc = countCalcd * 100
             percentageTextView.text = countCalc.toLong().toString()
 
-
         }
         numberTextView.text = countAll.toString()
+
+        resetButton.setOnClickListener {
+            countAll = 0
+            countWin = 0.0
+            numberTextView.text = "0"
+            percentageTextView.text = "0"
+        }
     }
 
 

@@ -8,10 +8,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#8BC34A"
+        android:gravity="center"
         android:orientation="vertical"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -20,13 +26,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="勝敗"
-            android:textSize="36sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/cpu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="276dp"
+            android:layout_height="119dp"
             android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/goo2" />
 
         <TextView
@@ -34,8 +43,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingBottom="8dp"
             android:text="player"
-            android:textSize="36sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,26 +57,37 @@
                 android:id="@+id/paaButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:text="パー" />
+                android:background="@drawable/button_background"
+                android:text="パー"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/gooButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:text="グー" />
+                android:background="@drawable/button_background"
+                android:text="グー"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/chokiButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:text="チョキ" />
+                android:background="@drawable/button_background"
+                android:text="チョキ"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -80,12 +102,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="あなたの"
                 android:textSize="30sp" />
 
@@ -106,17 +130,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/percentageTextView"
-                android:layout_width="169dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:text="0"
-                android:textSize="60sp"
+                android:textColor="#E91E63"
+                android:textSize="100sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -124,7 +150,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="%です"
-                android:textSize="36sp" />
+                android:textSize="30sp" />
+
         </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:background="#8BC34A"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="リセット"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
